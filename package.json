@@ -1,0 +1,23 @@
+{
+  "name": "sumofages-lib",
+  "version": "1.0.0",
+  "description": "A library to sum ages of several persons, and get the date when the expected age is reached.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euzebe/sumofages-lib.git"
+  },
+  "keywords": [
+    "sum",
+    "ages"
+  ],
+  "author": "euZebe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/euzebe/sumofages-lib/issues"
+  },
+  "homepage": "https://github.com/euzebe/sumofages-lib#readme"
+}
