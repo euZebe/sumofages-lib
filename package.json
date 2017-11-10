@@ -29,8 +29,8 @@
     "test": "npm run test-only",
     "test-only": "jest --coverage",
     "test:watch": "jest --watch",
-    "build": "babel src/**/*.js -d dist",
-    "build:watch": "babel --watch src/**/*.js -d dist"
+    "build": "babel src/**/*.js --out-dir dist",
+    "build:watch": "babel --watch src/**/*.js --out-dir dist"
   },
   "author": "euZebe",
   "license": "MIT",
