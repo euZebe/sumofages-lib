@@ -1,4 +1,26 @@
-src
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log
+
+# Dependencies
+node_modules/
+
+# Coverage
+coverage/
+
+
+# VS Code
+.vscode
+jsconfig.json
+
+# Misc
+.DS_Store
+tmp/
+
+# idea
+.idea
+
+yarn.*
+
 .*
-flow-typed
-coverage
