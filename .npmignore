@@ -24,3 +24,6 @@ tmp/
 yarn.*
 
 .*
+
+__tests__
+flow_typed

@@ -21,7 +21,7 @@
     "jest": "~21.2.1"
   },
   "scripts": {
-    "clean": "rm -rf coverage dist tmp",
+    "clean": "rm -rf coverage lib tmp",
     "lint": "eslint .",
     "postlint": "npm run typecheck",
     "typecheck": "flow check",
@@ -29,8 +29,8 @@
     "test": "npm run test-only",
     "test-only": "jest --coverage",
     "test:watch": "jest --watch",
-    "build": "babel src/**/*.js --out-dir dist",
-    "build:watch": "babel --watch src/**/*.js --out-dir dist"
+    "build": "babel src/**/*.js --out-dir lib",
+    "build:watch": "babel --watch src/**/*.js --out-dir lib"
   },
   "author": "euZebe",
   "license": "MIT",
