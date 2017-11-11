@@ -27,4 +27,4 @@ yarn.*
 
 __tests__
 flow-typed
-src
+/src
