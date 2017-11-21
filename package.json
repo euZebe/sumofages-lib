@@ -2,7 +2,44 @@
   "name": "sumofages-lib",
   "version": "1.0.7",
   "description": "Library to sum ages of persons and get the date when this sum reaches the expected value",
+  "author": "euZebe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/euzebe/sumofages-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/euzebe/sumofages-lib/issues"
+  },
+  "homepage": "https://github.com/euzebe/sumofages-lib#readme",
   "engineStrict": true,
+  "scripts": {
+    "clean": "rm -rf coverage lib tmp",
+    "lint": "eslint .",
+    "postlint": "npm run typecheck",
+    "typecheck": "flow check",
+    "pretest": "npm run lint",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "babel src/**/*.js --out-dir lib --source-maps",
+    "build:watch": "babel --watch src/**/*.js --out-dir lib"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "dependencies": {
+    "babel-runtime": "~6.26.0",
+    "moment": "2.19.1",
+    "shortid": "2.2.8"
+  },
   "devDependencies": {
     "babel-cli": "~6.26.0",
     "babel-core": "~6.26.0",
@@ -20,42 +57,5 @@
     "eslint-plugin-import": "~2.8.0",
     "flow-bin": "~0.58.0",
     "jest": "~21.2.1"
-  },
-  "scripts": {
-    "clean": "rm -rf coverage lib tmp",
-    "lint": "eslint .",
-    "postlint": "npm run typecheck",
-    "typecheck": "flow check",
-    "pretest": "npm run lint",
-    "test": "npm run test-only",
-    "test-only": "jest --coverage",
-    "test:watch": "jest --watch",
-    "build": "babel src/**/*.js --out-dir lib --source-maps",
-    "build:watch": "babel --watch src/**/*.js --out-dir lib"
-  },
-  "author": "euZebe",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/euzebe/sumofages-lib.git"
-  },
-  "bugs": {
-    "url": "https://github.com/euzebe/sumofages-lib/issues"
-  },
-  "homepage": "https://github.com/euzebe/sumofages-lib#readme",
-  "jest": {
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "js"
-    ],
-    "coverageDirectory": "coverage",
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ]
-  },
-  "dependencies": {
-    "babel-runtime": "~6.26.0",
-    "moment": "2.19.1",
-    "shortid": "2.2.8"
   }
 }
