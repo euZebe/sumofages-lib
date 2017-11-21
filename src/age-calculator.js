@@ -97,16 +97,6 @@ function getDateForAccruedDays(expectedAge: number, ...participants: Participant
             restingTime -= diffFromCurrentToNext * (participantIndex);
         }
     }
-    return result.startOf('day');
-
-    // add
-    if (!sortedByAge[1] || participantsDateOfBirthIsBeforeRestOfTime(sortedByAge[1], result, restingTime)) {
-    } else {
-        const diffFrom0To1 = moment(sortedByAge[1].dateOfBirth).diff(sortedByAge[0].dateOfBirth);
-
-        const result = moment(result).add(diffFrom0To1, 'milliseconds').add((restingTime - diffFrom0To1) / 2, 'milliseconds');
-        return result.startOf('day');
-    }
 }
 
 function participantsDateOfBirthIsBeforeRestOfTime(participant, date, restOfTime) {
