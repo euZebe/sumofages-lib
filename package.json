@@ -1,6 +1,6 @@
 {
   "name": "sumofages-lib",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Library to sum ages of persons and get the date when this sum reaches the expected value",
   "author": "euZebe",
   "license": "MIT",
