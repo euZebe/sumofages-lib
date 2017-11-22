@@ -125,5 +125,8 @@ describe('Calculator from days function', () => {
         const gabriel = new Participant(moment([1984, 9, 22]), 'Gabriel');
         const result = getDateForAccruedDays(8, euZebe, julia, gabriel);
         expect(result.isSame(moment([1985, 9, 22]))).toBeTruthy();
+        expect(euZebe.dateOfBirth.isSame(moment([1981, 9, 22]))).toBeTruthy();
+        expect(julia.dateOfBirth.isSame(moment([1982, 9, 22]))).toBeTruthy();
+        expect(gabriel.dateOfBirth.isSame(moment([1984, 9, 22]))).toBeTruthy();
     })
 })
