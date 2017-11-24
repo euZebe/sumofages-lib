@@ -122,7 +122,7 @@ function getDateForAccruedDays(expectedAge: number, ...participants: Participant
     }
     participantIndex += 1;
     const diffFromCurrentToNext = moment(nextParticipant.dateOfBirth).diff(currentParticipant.dateOfBirth);
-    result = nextParticipant.dateOfBirth;
+    result = moment(nextParticipant.dateOfBirth);
     restingTime -= diffFromCurrentToNext * (participantIndex);
   }
   return undefined;
